@@ -2,6 +2,7 @@
 <?php
 session_start();
 if($_SESSION['username'] == 'username') {
+<<<<<<< HEAD
   include "connect.php";
   print("<html>");
   $conn = connect_db();
@@ -17,6 +18,7 @@ if($_SESSION['username'] == 'username') {
         echo $row["city"] . " ";
         echo $row["state"] . " ";
         echo $row["country"] . " ";
+        echo "<a href=\"delete.php?id=" . $row["id"] . "\">DELETE</a>";
         print("<br>");
     }
    } else {
@@ -56,6 +58,7 @@ if($_SESSION['username'] == 'username') {
    mysqli_close($conn);
   } else {
    print("No access.");
-}
+ 
 ?>
+
 
